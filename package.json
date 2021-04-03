@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@splidejs/splide": "^2.4.21",
     "bootstrap": "^5.0.0-beta3",
     "browser-sync": "^2.26.13",
     "gulp": "^4.0.2",

@@ -1,9 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Pacifico&display=swap");
 
 body {
-  //font-family: 'Open Sans', sans-serif;
-  font-family: "Pacifico", cursive;
-  padding-top: 20px;
+  font-family: "Open Sans", sans-serif;
   &:before {
     z-index: 10001;
     line-height: 20px;
@@ -47,6 +45,137 @@ body {
     &:before {
       content: "XXLarge";
       background: #90f;
+    }
+  }
+}
+
+.intro {
+  width: 100%;
+  height: 100vh;
+  min-height: 520px;
+  margin: auto;
+  position: relative;
+  background-size: cover;
+  img {
+    width: 100%;
+    height: 100vh;
+  }
+  .txt {
+    position: absolute;
+    top: 390px;
+    left: calc(50% - 310px);
+    text-align: center;
+    color: $White;
+    h1 {
+      font-size: 3.875rem;
+      font-weight: $font-weight-light;
+      span {
+        font-weight: $font-weight-bold;
+      }
+    }
+    h2 {
+      font-size: 3rem;
+      padding-bottom: 5px;
+      font-weight: $font-weight-light;
+      span {
+        color: $SpringGreen;
+      }
+    }
+    h3 {
+      position: relative;
+      font-size: 1.125rem;
+      font-weight: $font-weight-light;
+      &:before {
+        display: block;
+        width: 28px;
+        content: "";
+        position: absolute;
+        border-bottom: 1px solid $SpringGreen;
+        top: 50%;
+        right: 114px;
+      }
+      &:after {
+        display: block;
+        width: 28px;
+        content: "";
+        position: absolute;
+        border-bottom: 1px solid $SpringGreen;
+        top: 50%;
+        left: 114px;
+      }
+    }
+  }
+  .splide__arrows {
+    display: none;
+  }
+  .splide__pagination {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    top: 50%;
+    right: 47px;
+    li {
+      width: 7px;
+      height: 7px;
+      margin-bottom: 14px;
+      .splide__pagination__page {
+        width: 7px;
+        height: 14px;
+        border-radius: 50%;
+        border: 1px solid $OuterSpace;
+        background: none;
+      }
+      .is-active {
+        background: $White;
+      }
+    }
+  }
+  nav {
+    height: 70px;
+    position: absolute;
+    width: 100%;
+    z-index: 9;
+    .logo {
+      font-family: "Pacifico", cursive;
+      span {
+        font-family: "Open Sans", sans-serif;
+        font-size: 0.8125rem;
+        height: 18px;
+        opacity: 30%;
+        border-left: 2px solid $PictonBlue;
+        padding-left: 20px;
+        padding-bottom: 3px;
+        margin-left: 25px;
+      }
+    }
+  }
+  .navbar {
+    @include media-breakpoint-up(xs) {
+      padding-top: 0.85rem;
+      padding-bottom: 1.3rem;
+    }
+    ul {
+      margin-top: 1rem;
+    }
+    .nav-item {
+      z-index: 11;
+      @include media-breakpoint-up(xs) {
+        background: $Haiti;
+        display: flex;
+        justify-content: center;
+      }
+      .nav-link {
+        border-top: 1px solid transparent;
+        padding: 1.5rem 0.6rem;
+        &:hover {
+          border-top: 1px solid $PictonBlue;
+        }
+        @include media-breakpoint-up(xs) {
+          padding-bottom: 1rem;
+        }
+      }
     }
   }
 }

@@ -1,3 +1,6 @@
+@import "_variables";
+$dark: $Haiti;
+
 $container-max-widths: (
   sm: 540px,
   md: 720px,
@@ -5,3 +8,8 @@ $container-max-widths: (
   xl: 1170px,
   xxl: 1320px,
 ) !default;
+
+$navbar-brand-font-size: 1.75rem;
+$nav-link-font-size: 0.8125rem;
+$navbar-dark-color: $White;
+$navbar-dark-hover-color: $White;
