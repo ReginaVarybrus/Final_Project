@@ -375,21 +375,148 @@ h2 {
   }
 }
 .works {
-  height: 352px;
+  height: 330px;
   p {
     font-size: 1.125rem;
     font-weight: $font-weight-semibold;
+    margin-bottom: 46px;
+    color: $BlackPearl;
+  }
+  .works-btn {
+    padding: 2px 19px;
+    background: none;
+    border: none;
+    color: $BlackPearl;
+    &:hover {
+      color: $White;
+      background: $Niagara;
+    }
   }
 }
 .thumbs {
   img {
     width: 100%;
   }
+  .thumbs-txt {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0;
+    .thumbs-content {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .thumbs-icon {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $White;
+        border-radius: 50%;
+        margin-bottom: 30px;
+        z-index: -1;
+        &.eye-icon {
+          &:after {
+            background: url(../images/sprite/sprite.svg#eye-icon) no-repeat;
+            content: "";
+            height: 20px;
+            width: 20px;
+            filter: invert(99%) sepia(0%) saturate(200%) hue-rotate(180deg)
+              brightness(119%) contrast(100%);
+          }
+        }
+      }
+      h4 {
+        color: $White;
+        font-weight: $font-weight-bold;
+        z-index: -1;
+      }
+      p {
+        color: $White;
+        font-size: $btn-font-size;
+        z-index: -1;
+      }
+      &:hover {
+        display: flex;
+        background-color: $NiagaraOpacity90;
+        transition: background-color 1s linear;
+      }
+      &:hover span,
+      &:hover h4,
+      &:hover p {
+        z-index: 5;
+      }
+    }
+  }
 }
 .team-info {
   p {
     font-size: 1.125rem;
     font-weight: $font-weight-semibold;
+    color: $BlackPearl;
+    padding-bottom: 90px;
+  }
+  .team {
+    h4 {
+      color: $BlackPearl;
+      font-weight: $font-weight-semibold;
+      padding-top: 18px;
+    }
+    p {
+      font-size: $nav-link-font-size;
+      color: $BlackPearl;
+      opacity: 56%;
+      padding-bottom: 196px;
+    }
+    .team-content {
+      position: relative;
+      .info {
+        position: absolute;
+        width: calc(100% + 2px);
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-left: 25px;
+        padding-right: 25px;
+        strong {
+          font-weight: $font-weight-bold;
+          font-size: $font-size-base;
+          color: $White;
+          z-index: -1;
+        }
+        p {
+          font-weight: $font-weight-normal;
+          font-size: $font-size-base;
+          color: $White;
+          opacity: 1;
+          padding-bottom: 10px;
+          z-index: -1;
+        }
+      }
+      &:hover .info {
+        display: flex;
+        background-color: $NiagaraOpacity90;
+        transition: background-color 0.5s ease-out;
+      }
+      &:hover span,
+      &:hover strong,
+      &:hover p {
+        z-index: 5;
+      }
+      &:hover h4 {
+        color: $Niagara;
+      }
+    }
   }
 }
 .more-info {
