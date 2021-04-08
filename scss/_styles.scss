@@ -588,12 +588,13 @@ h2 {
   .more-icons {
     width: 130px;
     height: 130px;
-    border-bottom: 2px solid $White40;
+    border: 2px solid $White40;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 25px;
+    margin-left: calc(50% - 65px);
+    margin-bottom: 32px;
     &.clock-icon {
       &:after {
         background: url(../images/sprite/sprite.svg#clock-icon) no-repeat;
@@ -634,11 +635,83 @@ h2 {
           contrast(100%);
       }
     }
-    strong {
-      font-size: 3.75rem;
-      font-weight: $font-weight-semibold;
-      color: $White;
+  }
+  strong {
+    font-size: 3.75rem;
+    font-weight: $font-weight-semibold;
+    color: $White;
+    line-height: 5rem;
+  }
+  h4 {
+    color: $White;
+    text-transform: uppercase;
+  }
+}
+.form-info {
+  p {
+    font-size: 1.125rem;
+    font-weight: $font-weight-semibold;
+    margin-bottom: 71px;
+    color: $BlackPearl;
+  }
+  .contact-info {
+    h4 {
+      font-size: 1.375rem;
+      padding-bottom: 23px;
+      line-height: 2rem;
     }
+    p {
+      font-size: 0.8125rem;
+      color: $Nevada;
+      line-height: 1.5rem;
+    }
+  }
+  .form {
+    h3 {
+      font-size: 1.5rem;
+      font-weight: $font-weight-bold;
+    }
+    .row-form {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      height: 55px;
+      .left-form {
+        width: 370px;
+      }
+      .right-form {
+        width: 370px;
+        border-bottom: 1px solid #000;
+      }
+    }
+    input[type="text"],
+    input[type="email"] {
+      font: 1.25rem "Open Sans", sans-serif;
+      color: $Nevada;
+      width: 100%;
+      height: 55px;
+      border-bottom: 1px solid #000;
+      padding-left: 23px;
+      padding-right: 23px;
+      background-color: #f09;
+    }
+    .txt-area {
+      width: 100%;
+      height: 70px;
+      border-bottom: 1px solid #000;
+      padding: 21px 23px;
+      resize: none;
+      border: none;
+      background-color: #f09;
+    }
+    input:focus,
+    textarea:focus {
+      outline: none;
+    }
+  }
+  ::placeholder {
+    font: 0.8125rem "Open Sans", sans-serif;
+    color: $ShuttleGray;
   }
 }
 .map {
