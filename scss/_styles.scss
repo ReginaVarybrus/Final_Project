@@ -65,7 +65,7 @@ body {
     bottom: 175px;
     left: calc(50% - 310px);
     text-align: center;
-    color: $White;
+    color: $white;
     h1 {
       font-size: 3.875rem;
       font-weight: $font-weight-light;
@@ -79,7 +79,7 @@ body {
       padding-top: 0;
       font-weight: $font-weight-light;
       text-transform: none;
-      color: $White;
+      color: $white;
       span {
         color: $SpringGreen;
       }
@@ -132,7 +132,7 @@ body {
         background: none;
       }
       .is-active {
-        background: $White;
+        background: $white;
       }
     }
   }
@@ -388,7 +388,7 @@ h2 {
     border: none;
     color: $BlackPearl;
     &:hover {
-      color: $White;
+      color: $white;
       background: $Niagara;
     }
   }
@@ -417,7 +417,7 @@ h2 {
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 1px solid $White;
+        border: 1px solid $white;
         border-radius: 50%;
         margin-bottom: 30px;
         z-index: -1;
@@ -433,12 +433,12 @@ h2 {
         }
       }
       h4 {
-        color: $White;
+        color: $white;
         font-weight: $font-weight-bold;
         z-index: -1;
       }
       p {
-        color: $White;
+        color: $white;
         font-size: $btn-font-size;
         z-index: -1;
       }
@@ -500,7 +500,7 @@ h2 {
         p {
           font-weight: $font-weight-normal;
           font-size: $font-size-base;
-          color: $White;
+          color: $white;
           opacity: 1;
           padding-bottom: 0;
           z-index: -1;
@@ -639,15 +639,16 @@ h2 {
   strong {
     font-size: 3.75rem;
     font-weight: $font-weight-semibold;
-    color: $White;
+    color: $white;
     line-height: 5rem;
   }
   h4 {
-    color: $White;
+    color: $white;
     text-transform: uppercase;
   }
 }
 .form-info {
+  height: 640px;
   p {
     font-size: 1.125rem;
     font-weight: $font-weight-semibold;
@@ -660,16 +661,25 @@ h2 {
       padding-bottom: 23px;
       line-height: 2rem;
     }
-    p {
-      font-size: 0.8125rem;
-      color: $Nevada;
-      line-height: 1.5rem;
+    address {
+      display: flex;
+      flex-direction: column;
+      p,
+      a {
+        font-size: 0.8125rem;
+        font-weight: $font-weight-normal;
+        color: $Nevada;
+        line-height: 1.5rem;
+        margin-bottom: 0;
+        text-decoration: none;
+      }
     }
   }
   .form {
     h3 {
       font-size: 1.5rem;
       font-weight: $font-weight-bold;
+      padding-bottom: 18px;
     }
     .row-form {
       width: 100%;
@@ -686,32 +696,145 @@ h2 {
     }
     input[type="text"],
     input[type="email"] {
-      font: 1.25rem "Open Sans", sans-serif;
-      color: $Nevada;
+      font: 1rem "Open Sans", sans-serif;
+      color: $BlackPearl;
       width: 100%;
       height: 55px;
-      border-bottom: 1px solid #000;
-      padding-left: 23px;
+      border: none;
+      border-bottom: 1px solid $Black20;
       padding-right: 23px;
-      background-color: #f09;
     }
     .txt-area {
-      width: 100%;
-      height: 70px;
-      border-bottom: 1px solid #000;
-      padding: 21px 23px;
+      font: 1rem "Open Sans", sans-serif;
+      color: $BlackPearl;
+      width: calc(100% - 24px);
+      height: 80px;
+      padding-left: 0;
+      padding-top: 43px;
+      padding-right: 23px;
       resize: none;
       border: none;
-      background-color: #f09;
+      border-bottom: 1px solid $Black20;
+      margin-left: 12px;
     }
     input:focus,
     textarea:focus {
       outline: none;
     }
+    .form-btn {
+      width: 100%;
+      height: 50px;
+      margin-left: 12px;
+      position: relative;
+      margin-top: 20px;
+      input[type="submit"] {
+        font: 1rem "Open Sans", sans-serif;
+        color: $black;
+        border: none;
+        outline: none;
+        background: none;
+        width: 140px;
+        padding-right: 0;
+      }
+      .mail {
+        position: absolute;
+        background: url(../images/sprite/sprite.svg#mail) no-repeat;
+        content: "";
+        height: 25px;
+        width: 41px;
+        top: 12px;
+        right: 113px;
+        filter: invert(52%) sepia(32%) saturate(6019%) hue-rotate(137deg)
+          brightness(101%) contrast(89%);
+      }
+    }
   }
   ::placeholder {
     font: 0.8125rem "Open Sans", sans-serif;
     color: $ShuttleGray;
+  }
+  .social-items {
+    width: 70px;
+    display: flex;
+    position: relative;
+    li {
+      list-style-type: none;
+      .behance-icon {
+        position: absolute;
+        background: url(../images/sprite/sprite.svg#behance-icon) no-repeat;
+        content: "";
+        height: 28px;
+        width: 28px;
+        top: 16px;
+        left: calc(50% - 14px);
+        filter: invert(10%) sepia(22%) saturate(162%) hue-rotate(283deg)
+          brightness(92%) contrast(116%);
+        &:hover {
+          filter: invert(0%) sepia(4%) saturate(16%) hue-rotate(162deg)
+            brightness(98%) contrast(106%);
+        }
+      }
+      .ico-twitter {
+        position: absolute;
+        background: url(../images/sprite/sprite.svg#ico-twitter) no-repeat;
+        content: "";
+        height: 27px;
+        width: 27px;
+        top: 62px;
+        left: calc(50% - 14px);
+        filter: invert(11%) sepia(6%) saturate(6746%) hue-rotate(165deg)
+          brightness(99%) contrast(101%);
+        opacity: 20%;
+        &:hover {
+          opacity: 100%;
+        }
+      }
+      .ico-dribble {
+        position: absolute;
+        background: url(../images/sprite/sprite.svg#ico-dribble) no-repeat;
+        content: "";
+        height: 27px;
+        width: 27px;
+        top: 104px;
+        left: calc(50% - 14px);
+        filter: invert(11%) sepia(6%) saturate(6746%) hue-rotate(165deg)
+          brightness(99%) contrast(101%);
+        opacity: 20%;
+        &:hover {
+          opacity: 100%;
+        }
+      }
+      .forrst-icon {
+        position: absolute;
+        background: url(../images/sprite/sprite.svg#forrst-icon) no-repeat;
+        content: "";
+        height: 27px;
+        width: 27px;
+        top: 148px;
+        left: calc(50% - 14px);
+        filter: invert(11%) sepia(6%) saturate(6746%) hue-rotate(165deg)
+          brightness(99%) contrast(101%);
+        opacity: 20%;
+        &:hover {
+          opacity: 100%;
+        }
+      }
+      .ico-google-plus {
+        position: absolute;
+        background: url(../images/sprite/sprite.svg#ico-google-plus) no-repeat;
+        content: "";
+        height: 25px;
+        width: 27px;
+        top: 193px;
+        left: calc(50% - 8px);
+        filter: invert(11%) sepia(6%) saturate(6746%) hue-rotate(165deg)
+          brightness(99%) contrast(101%);
+        opacity: 20%;
+        &:hover {
+          opacity: 100%;
+        }
+      }
+    }
   }
 }
 .map {
