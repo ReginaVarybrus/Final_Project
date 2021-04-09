@@ -846,4 +846,108 @@ h2 {
 .main-footer {
   height: 405px;
   background: $MountainMeadow;
+  .footer-content {
+    padding-top: 100px;
+    color: $white;
+    p {
+      font-size: 0.8125rem;
+      line-height: 24px;
+      padding-top: 16px;
+    }
+    .logo-footer {
+      a {
+        font-family: "Pacifico", cursive;
+        font-size: $navbar-brand-font-size;
+        color: $white;
+        text-decoration: none;
+        line-height: 1rem;
+      }
+      p {
+        padding-top: 33px;
+      }
+    }
+    strong {
+      font-size: 0.875rem;
+      font-weight: $font-weight-bold;
+      opacity: 80%;
+      margin-top: 10px;
+    }
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background: none;
+      height: 47px;
+      border: 2px solid $white;
+      border-radius: 4px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-top: 39px;
+      position: relative;
+      .search-arrow {
+        position: absolute;
+        background: url(../images/sprite/sprite.svg#search-arrow) no-repeat;
+        content: "";
+        height: 28px;
+        width: 21px;
+        top: calc(50% - 10px);
+        right: 13px;
+        filter: invert(97%) sepia(2%) saturate(6353%) hue-rotate(156deg)
+          brightness(96%) contrast(79%);
+      }
+    }
+    .explore-items {
+      display: flex;
+      margin-top: 32px;
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+        li {
+          padding-right: 41px;
+          margin-bottom: 8px;
+          a {
+            font-size: 0.8125rem;
+            color: $white;
+            text-decoration: none;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+    .copy {
+      height: 38px;
+      width: 100%;
+      position: relative;
+      margin-top: 57px;
+      p {
+        padding-top: 0;
+        padding-left: 12px;
+        line-height: 23px;
+        border-left: 1px solid $BlackPearl30;
+        span {
+          color: $BlackPearl;
+        }
+      }
+      .icon-heart {
+        position: absolute;
+        background: url(../images/sprite/sprite.svg#heart) no-repeat;
+        content: "";
+        height: 18px;
+        width: 18px;
+        top: 2px;
+        left: 98px;
+        filter: invert(34%) sepia(48%) saturate(700%) hue-rotate(118deg)
+          brightness(94%) contrast(88%);
+      }
+    }
+    .copyright {
+      font-size: $nav-link-font-size;
+      color: $BlackPearl;
+      padding-top: 60px;
+      padding-left: 12px;
+    }
+  }
 }
