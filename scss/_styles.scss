@@ -596,43 +596,139 @@ h2 {
     margin-left: calc(50% - 65px);
     margin-bottom: 32px;
     &.clock-icon {
-      &:after {
-        background: url(../images/sprite/sprite.svg#clock-icon) no-repeat;
-        content: "";
-        height: 37px;
-        width: 37px;
-        filter: sepia(0%) saturate(200%) hue-rotate(180deg) brightness(119%)
-          contrast(100%);
+      svg {
+        fill: $white;
+        path {
+          stroke: $white;
+          stroke-dasharray: 120;
+          stroke-dashoffset: 0;
+        }
+      }
+      &:hover {
+        path {
+          fill: none;
+          stroke: $white;
+          animation: animation-clock 1.5s
+            cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+        }
+      }
+    }
+    @keyframes animation-clock {
+      0% {
+        stroke-dashoffset: 0;
+      }
+      50% {
+        stroke-dashoffset: 120;
+      }
+      85% {
+        stroke-dashoffset: 240;
+        fill: transparent;
+      }
+      100% {
+        stroke-dashoffset: 120;
+        fill: $white;
       }
     }
     &.friends-icon {
-      &:after {
-        background: url(../images/sprite/sprite.svg#friends-icon) no-repeat;
-        content: "";
-        height: 37px;
-        width: 37px;
-        filter: sepia(0%) saturate(200%) hue-rotate(180deg) brightness(119%)
-          contrast(100%);
+      svg {
+        fill: $white;
+        path {
+          stroke: $white;
+          stroke-dasharray: 115;
+          stroke-dashoffset: 0;
+        }
+      }
+      &:hover {
+        path {
+          fill: none;
+          stroke: $white;
+          animation: animation-friends 1.5s
+            cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+        }
+      }
+    }
+    @keyframes animation-friends {
+      0% {
+        stroke-dashoffset: 0;
+      }
+      50% {
+        stroke-dashoffset: 115;
+      }
+      85% {
+        stroke-dashoffset: 230;
+        fill: transparent;
+      }
+      100% {
+        stroke-dashoffset: 115;
+        fill: $white;
       }
     }
     &.rocket-icon {
-      &:after {
-        background: url(../images/sprite/sprite.svg#rocket-icon) no-repeat;
-        content: "";
-        height: 37px;
-        width: 37px;
-        filter: sepia(0%) saturate(200%) hue-rotate(180deg) brightness(119%)
-          contrast(100%);
+      svg {
+        fill: $white;
+        path {
+          stroke: $white;
+          stroke-dasharray: 102;
+          stroke-dashoffset: 0;
+        }
+      }
+      &:hover {
+        path {
+          fill: none;
+          stroke: $white;
+          animation: animation-rocket 1.5s
+            cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+        }
+      }
+    }
+    @keyframes animation-rocket {
+      0% {
+        stroke-dashoffset: 0;
+      }
+      50% {
+        stroke-dashoffset: 102;
+      }
+      85% {
+        stroke-dashoffset: 204;
+        fill: transparent;
+      }
+      100% {
+        stroke-dashoffset: 102;
+        fill: $white;
       }
     }
     &.cup-icon {
-      &:after {
-        background: url(../images/sprite/sprite.svg#cup-icon) no-repeat;
-        content: "";
-        height: 37px;
-        width: 37px;
-        filter: sepia(0%) saturate(200%) hue-rotate(180deg) brightness(119%)
-          contrast(100%);
+      svg {
+        fill: $white;
+        path {
+          stroke: $white;
+          stroke-dasharray: 146;
+          stroke-dashoffset: 0;
+        }
+      }
+      &:hover {
+        path {
+          fill: none;
+          stroke: $white;
+          animation: animation-cup 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+            forwards;
+        }
+      }
+    }
+    @keyframes animation-cup {
+      0% {
+        stroke-dashoffset: 0;
+      }
+      50% {
+        stroke-dashoffset: 146;
+      }
+      85% {
+        stroke-dashoffset: 292;
+        fill: transparent;
+      }
+      100% {
+        stroke-dashoffset: 146;
+        fill: $white;
       }
     }
   }
